@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tender_place/page-1/onBoardingScreen.dart';
 import 'dart:ui';
 
 import '../utils.dart';
@@ -25,7 +26,6 @@ class VerifyIdentity extends StatelessWidget {
 
 
 class Scene extends StatelessWidget {
-  late var ROLE = 0;
   @override
   Widget build(BuildContext context) {
     double baseWidth = 414;
@@ -43,14 +43,22 @@ class Scene extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 328*fem, 68.5*fem),
-              width: 127*fem,
-              height: 17.5*fem,
-              child: Image.asset(
-                'assets/page-1/images/auto-group-kriw.png',
+            InkWell(
+              onTap: () {
+                Navigator.pushAndRemoveUntil(context,
+                    MaterialPageRoute(builder: (BuildContext context) => onBoardingScreen()),
+                    ModalRoute.withName('/')
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 328*fem, 68.5*fem),
                 width: 127*fem,
                 height: 17.5*fem,
+                child: Image.asset(
+                  'assets/page-1/images/auto-group-kriw.png',
+                  width: 127*fem,
+                  height: 17.5*fem,
+                ),
               ),
             ),
             Container(

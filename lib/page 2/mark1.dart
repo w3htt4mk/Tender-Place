@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tender_place/page%202/mark2.dart';
 import 'dart:ui';
 import 'package:tender_place/page%202/request1.dart';
+import 'package:tender_place/page%202/request_history.dart';
 import 'package:tender_place/page%202/screen_role1.dart';
 import '../utils.dart';
 
@@ -98,7 +100,7 @@ class _SceneState extends State<Scene> {
             Container(
               margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 173*fem, 11*fem),
               child: Text(
-                'Критерий 1/20',
+                'Критерий 1/5',
                 style: SafeGoogleFont (
                   'Poppins',
                   fontSize: 20*ffem,
@@ -131,7 +133,7 @@ class _SceneState extends State<Scene> {
                 borderRadius: BorderRadius.circular(15*fem),
               ),
               child: Text(
-                '13553\$ ',
+                '250 000 ₽',
                 style: SafeGoogleFont (
                   'Poppins',
                   fontSize: 20*ffem,
@@ -176,7 +178,12 @@ class _SceneState extends State<Scene> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushAndRemoveUntil(context,
+                    MaterialPageRoute(builder: (BuildContext context) => MarkScreen2()),
+                    ModalRoute.withName('/')
+                );
+              },
               child: Container(
                 margin: EdgeInsets.fromLTRB(244.58*fem, 0*fem, 0*fem, 31.64*fem),
                 width: 94.58*fem,
@@ -200,7 +207,12 @@ class _SceneState extends State<Scene> {
                           ModalRoute.withName('/')
                       );
                     }, icon: Icon(Icons.featured_play_list_rounded)),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.history)),
+                    IconButton(onPressed: () {
+                      Navigator.pushAndRemoveUntil(context,
+                          MaterialPageRoute(builder: (BuildContext context) => RequestHistory()),
+                          ModalRoute.withName('/')
+                      );
+                    }, icon: Icon(Icons.history)),
                     IconButton(onPressed: () {
                       Navigator.pushAndRemoveUntil(context,
                           MaterialPageRoute(builder: (BuildContext context) => ScreenRole1()),

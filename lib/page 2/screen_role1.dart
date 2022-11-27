@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:tender_place/page%202/request1.dart';
+import 'package:tender_place/page%202/request_history.dart';
 
 import '../page-1/verify-identity.dart';
 import '../utils.dart';
@@ -483,7 +484,12 @@ class ProfileScreen extends StatelessWidget {
                           ModalRoute.withName('/')
                       );
                     }, icon: Icon(Icons.featured_play_list_rounded)),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.history)),
+                    IconButton(onPressed: () {
+                      Navigator.pushAndRemoveUntil(context,
+                          MaterialPageRoute(builder: (BuildContext context) => RequestHistory()),
+                          ModalRoute.withName('/')
+                      );
+                    }, icon: Icon(Icons.history)),
                     IconButton(onPressed: () {
                       Navigator.pushAndRemoveUntil(context,
                           MaterialPageRoute(builder: (BuildContext context) => ScreenRole1()),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tender_place/page%202/request_history.dart';
 import 'dart:ui';
 import 'package:tender_place/page%202/screen_role1.dart';
 
@@ -385,7 +386,12 @@ class Request extends StatelessWidget {
                               ModalRoute.withName('/')
                           );
                         }, icon: Icon(Icons.featured_play_list_rounded)),
-                        IconButton(onPressed: () {}, icon: Icon(Icons.history)),
+                        IconButton(onPressed: () {
+                          Navigator.pushAndRemoveUntil(context,
+                              MaterialPageRoute(builder: (BuildContext context) => RequestHistory()),
+                              ModalRoute.withName('/')
+                          );
+                        }, icon: Icon(Icons.history)),
                         IconButton(onPressed: () {
                           Navigator.pushAndRemoveUntil(context,
                               MaterialPageRoute(builder: (BuildContext context) => ScreenRole1()),

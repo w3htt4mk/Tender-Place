@@ -122,6 +122,10 @@ flutter:
     - assets/page-4/images/icon-32px-light-settings-mBG.png
     - assets/page-4/images/mask-group-bRk.png
     - assets/page-4/images/back.png
+    - assets/page-5/images/bg.png
+    - assets/page-5/images/icon-UrS.png
+    - assets/page-5/images/icon.png
+    - assets/page-5/images/arrow.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
